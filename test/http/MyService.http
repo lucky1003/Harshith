@@ -1,0 +1,76 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Employee
+# @name Employee_GET
+GET {{server}}/odata/v4/my/Employee
+Authorization: Basic {{username}}:{{password}}
+
+
+### Employee
+# @name Employee_POST
+POST {{server}}/odata/v4/my/Employee
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "11376418-b891-424a-97ff-d111e2cb60fc",
+  "nameFirst": "nameFirst-11376418",
+  "nameMiddle": "nameMiddle-11376418",
+  "nameLast": "nameLast-11376418",
+  "nameInitials": "nameInitials-11376418",
+  "gender": "M",
+  "language": "8",
+  "phoneNumber": "phoneNumber-11376418",
+  "email": "email-11376418",
+  "loginName": "ame-11376418",
+  "currency": {
+    "code": "396"
+  },
+  "salaryAmount": 12383720.11,
+  "accountNumber": "tNumber-11376418",
+  "bankId": "11376418",
+  "bankName": "bankName-11376418"
+}
+
+
+### Employee
+# @name Employee_PATCH
+PATCH {{server}}/odata/v4/my/Employee/11376418-b891-424a-97ff-d111e2cb60fc
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "11376418-b891-424a-97ff-d111e2cb60fc",
+  "nameFirst": "nameFirst-11376418",
+  "nameMiddle": "nameMiddle-11376418",
+  "nameLast": "nameLast-11376418",
+  "nameInitials": "nameInitials-11376418",
+  "gender": "M",
+  "language": "8",
+  "phoneNumber": "phoneNumber-11376418",
+  "email": "email-11376418",
+  "loginName": "ame-11376418",
+  "currency": {
+    "code": "396"
+  },
+  "salaryAmount": 12383720.11,
+  "accountNumber": "tNumber-11376418",
+  "bankId": "11376418",
+  "bankName": "bankName-11376418"
+}
+
+
+### Employee
+# @name Employee_DELETE
+DELETE {{server}}/odata/v4/my/Employee/11376418-b891-424a-97ff-d111e2cb60fc
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Currencies
+# @name Currencies_GET
+GET {{server}}/odata/v4/my/Currencies
+Authorization: Basic {{username}}:{{password}}
